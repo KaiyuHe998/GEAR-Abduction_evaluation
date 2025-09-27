@@ -11,7 +11,7 @@ It measures hypothesis sets along three classical dimensions:
 We benchmarked 9 LLMs on 4 popular datasets (MINI-ARC, ACRE, LIST FUNCTIONS, ARC-2025), generating over 50k hypotheses.
 We also propose a **momentum-based curriculum training strategy** that improves all three objectives without gold-label supervision
 
-![Figure1](figs/Figure1.png)
+![Figure1](Project_abduction_evaluation/figs/Figure1.png)
 
 # $\textcolor{purple}{\text{GEAR evaluation on 9 LLMs}}$
 
