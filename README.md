@@ -1,3 +1,18 @@
+# ⚙️GEAR: General Evaluation for Abductive Reasoning
+
+This repository accompanies our paper **GEAR** (General Evaluation for Abductive Reasoning).  
+GEAR provides a **fully automated, label-free, and scalable framework** to evaluate abductive reasoning in large language models.  
+It measures hypothesis sets along three classical dimensions:
+
+- **Consistency** – hypotheses must correctly explain given observations  
+- **Generalizability** – consistent hypotheses should make testable predictions on unseen inputs  
+- **Diversity** – hypothesis sets should cover distinct perspectives and non-redundant patterns  
+
+We benchmarked 9 LLMs on 4 popular datasets (MINI-ARC, ACRE, LIST FUNCTIONS, ARC-2025), generating over 50k hypotheses.
+We also propose a **momentum-based curriculum training strategy** that improves all three objectives without gold-label supervision
+
+![image.png](Example_files/3dbe1fb4-cd20-4f9d-ba3b-605fe9b8c2af.png)
+
 # $\textcolor{purple}{\text{GEAR evaluation on 9 LLMs}}$
 
 ### Step 1, Generate initial observation(io) pairs (See in paper section 4 Sampling initial observations.)
@@ -88,7 +103,7 @@ print(train_split['acre'])
     ['0', '12', '13', '14', '17', '18', '2', '21', '22', '27', '3', '32', '38', '39', '4', '40', '41', '42', '44', '49', '5', '51', '52', '53', '59', '6', '81', '83', '84', '85', '87', '89', '93', '95', '98', '69', '72', '74', '77', '80']
 
 
-# $\textcolor{purple}{\text{Reinforcement Learning \& Evaluation}}$
+# $\textcolor{purple}{\text{Reinforcement Learning and Evaluation}}$
 
 ### Step 1: Model training:
 - Call ```python final_dpo_default_curriculum -m llama-3.1-8b -g 0 -p example_train -t scratch``` where
